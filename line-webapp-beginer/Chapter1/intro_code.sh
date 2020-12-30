@@ -4,6 +4,6 @@ git clone https://github.com/line-developer-community/beginer-webapp-handson-cod
 
 # Install Python Libralies
 cd example
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 clear
 echo "Finish!"

@@ -10,4 +10,4 @@
 
 - bot の実行
 
-`python step3/app.py`{{execute}}
+`python3 step3/app.py`{{execute}}

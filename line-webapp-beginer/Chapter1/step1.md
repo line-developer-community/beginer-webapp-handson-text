@@ -2,7 +2,7 @@
 
 - アプリを動かしてみる
 
-`python step1/app.py`{{execute}}
+`python3 step1/app.py`{{execute}}
 
 - GET と POST の動作確認
 
