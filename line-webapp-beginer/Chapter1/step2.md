@@ -34,15 +34,15 @@
 - 任意以外の項目はすべて入力する
 - チャネル名には`LINE`を含められない
 
-[categories](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/new_channel.png)
+![categories](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/new_channel.png)
 
 利用規約に同意して「作成」をクリック
 
-[agreements](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/agreements.png)
+![agreements](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/agreements.png)
 
 「同意する」をクリック
 
-[agreement_policy](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/agreement_policy.png)
+![agreement_policy](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/agreement_policy.png)
 
 ## Webhook の設定
 
