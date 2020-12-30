@@ -1,0 +1,11 @@
+{
+  "title": "LINEではじめるWebアプリ開発入門",
+  "description": "LINE bot開発を通じてWebアプリの仕組みを理解する",
+  "courses": [
+    {
+      "course_id": "Chapter1",
+      "title": "Introduction",
+      "description": "First Web App "
+    }
+  ]
+}
