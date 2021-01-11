@@ -48,4 +48,4 @@
 
 - Webhook URL には以下を設定する
 
-`https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/linebot`{{copy}}
+`https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/callback`{{copy}}

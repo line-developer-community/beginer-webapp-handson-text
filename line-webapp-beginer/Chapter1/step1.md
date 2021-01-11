@@ -17,4 +17,4 @@
 
 `curl http://localhost:5000/send -X POST -H "Content-Type: application/json" --data '{"value": "Hello World!"}'`{{execute}}
 
-`Ctrl + C`でアプリを止める
+アプリを起動しているターミナルに戻り、`Ctrl + C`でアプリを止める
