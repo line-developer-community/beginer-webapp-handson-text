@@ -1,50 +1,51 @@
-# データベースを使用したアプリを開発する
+# Bot チャネルの作成・設定
 
-## アプリを動かしてみる
+## LINE Developers にログイン
 
-`docker-compose up`{{execute T1}}
+[LINE Developers](https://developers.line.biz/ja/) にアクセスしてログイン
 
-## データベースの設定
+![login console](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/login_console.png)
 
-### テーブルの作成
+## プロバイダーを選択
 
-以下のコマンドを実行し、テーブルの作成を行う
+任意のプロバイダーを選択
 
-`docker-compose run web python create_table.py` {{execute T2}}
+### プロバイダーを未作成の場合
 
-### テーブルの確認
+プロバイダー一覧画面の中の「作成」ボタンを押下して新規作成する
 
-作成したテーブルの構造を確認するためにデータベースのコンテナに入る
+- 任意のプロバイダー名で作成する
+- 文字列の中に`LINE`は含められない
 
-`docker-compose exec db bash`{{execute T2}}
+![providers](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/providers.png)
 
-コンテナに入ったらデータベースに接続する
+## LINE bot のチャネルを作成
 
-`psql "postgresql://db:5432/todo?user=postgres&password=postgres"`{{execute T2}}
+プロバイダーを選択したら Bot のチャネルを作成する
 
-以下のコマンドでテーブルの構造を確認する
+![channels](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/channels.png)
 
-`\d user_todo`{{execute T2}}
+「Messaging API」を選択
 
-以下のテーブル構造が表示されればテーブル作成は完了できている
+![categories](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/categories.png)
 
-```
-                                         Table "public.user_todo"
-   Column    |            Type             | Collation | Nullable |                Default
--------------+-----------------------------+-----------+----------+---------------------------------------
- id          | integer                     |           | not null | nextval('user_todo_id_seq'::regclass)
- user_id     | character varying(255)      |           |          |
- is_progress | boolean                     |           |          |
- todo_detail | character varying(255)      |           |          |
- created_at  | timestamp without time zone |           |          |
- updated_at  | timestamp without time zone |           |          | CURRENT_TIMESTAMP
-Indexes:
-    "user_todo_pkey" PRIMARY KEY, btree (id)
-```
+チャネル情報を入力する
 
-確認が終わったら、以下のコマンドでデータベースから出る
+- 任意以外の項目はすべて入力する
+- チャネル名には`LINE`を含められない
 
-`exit;`{{execute T2}}
+![categories](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/new_channel.png)
 
-再度以下のコマンドを実行し、データベースのコンテナから出る
-`exit;`{{execute T2}}
+利用規約に同意して「作成」をクリック
+
+![agreements](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/agreements.png)
+
+「同意する」をクリック
+
+![agreement_policy](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter1/images/agreement_policy.png)
+
+## Webhook の設定
+
+- Webhook URL には以下を設定する
+
+`https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/callback`{{copy}}

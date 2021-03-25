@@ -1,7 +1,8 @@
-# LIFF アプリの用意
+# アプリを動かすための準備
 
-## エンドポイント の設定
+## .env の設定
 
-- エンドポイント には以下を設定する
-
-`https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com`{{copy}}
+| 項目名               | 値                           |
+| :------------------- | :--------------------------- |
+| CHANNEL_ACCESS_TOKEN | （チャネルアクセストークン） |
+| CHANNEL_SECRET       | （チャネルシークレット）     |
