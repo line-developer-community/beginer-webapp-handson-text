@@ -16,9 +16,7 @@
 
 以下のコマンドを実行し、テーブルの作成を行う
 
-`cd liff-todo-app`{{execute T2}}
-
-`docker-compose run web python create_table.py`{{execute T2}}
+`cd ~/liff-todo-app && docker-compose run web python create_table.py`{{execute T2}}
 
 ### テーブルの確認
 
@@ -50,9 +48,4 @@ Indexes:
     "user_todo_pkey" PRIMARY KEY, btree (id)
 ```
 
-確認が終わったら、以下のコマンドでデータベースから出る
-
-`exit;`{{execute T2}}
-
-再度以下のコマンドを実行し、データベースのコンテナから出る
-`exit;`{{execute T2}}
+## データベースを触ってみよう
