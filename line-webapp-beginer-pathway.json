@@ -5,7 +5,12 @@
     {
       "course_id": "Chapter1",
       "title": "Introduction",
-      "description": "First Web App "
+      "description": "初めてのWebアプリとLINE bot"
+    },
+    {
+      "course_id": "Chapter2",
+      "title": "Advance",
+      "description": "データベース活用したLIFFアプリとLINE bot"
     }
   ]
 }
