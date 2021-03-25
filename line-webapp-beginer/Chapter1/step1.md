@@ -13,8 +13,11 @@
 
 ### POST の確認
 
-もう一つターミナルを開いて以下の Curl コマンドを実行
+以下のコマンドでもう一つターミナルを開く
+`echo "launch Terminal2"`{{execute T2}}
 
-`curl http://localhost:5000/send -X POST -H "Content-Type: application/json" --data '{"value": "Hello World!"}'`{{execute}}
+以下の Curl コマンドを実行
+
+`curl http://localhost:5000/send -X POST -H "Content-Type: application/json" --data '{"value": "Hello World!"}'`{{execute T2}}
 
 アプリを起動しているターミナルに戻り、`Ctrl + C`でアプリを止める

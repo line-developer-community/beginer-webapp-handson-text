@@ -1,8 +1,8 @@
 {
-  "title": "Chapter1",
-  "description": "First Web App",
-  "difficulty": "Beginner",
-  "time": "30 minutes",
+  "title": "Chapter2",
+  "description": "LIFF Todo App",
+  "difficulty": "Advanced",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
@@ -16,6 +16,10 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
       }
     ],
     "intro": {
