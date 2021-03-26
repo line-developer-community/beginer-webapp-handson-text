@@ -13,7 +13,7 @@ LINE bot と同様に LIFF のチャネルを作成する
 チャネル情報を入力する
 
 - アプリタイプは「ウェブアプリ」を選択する
-- 他は任意のもので設定して OK
+- 他の必須項目は任意のものを設定する
 
 ![channel_setting](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/line_login_channel.png)
 
@@ -34,3 +34,5 @@ LIFF の情報を設定する
 scope は`openid`、ボットリンク機能は`On(Normal)`を選択する
 
 ![scope_link](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/scope_link.png)
+
+他の必須項目は任意のものを設定したら「作成」をクリックする
