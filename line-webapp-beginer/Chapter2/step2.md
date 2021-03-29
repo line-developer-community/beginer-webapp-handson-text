@@ -41,7 +41,7 @@ scope は`openid`、ボットリンク機能は`On(Normal)`を選択する
 
 「LIFF」タブの LIFF アプリ一覧から、先程作成した LIFF の`LIFF ID`及び`LIFF URL`をメモする
 
-![liff_apps](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/LIFF_apps.png)
+![liff_apps](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/LIFF_app_list.png)
 
 「チャネル基本設定」タブの上にあるチャネル ID をメモする
 
