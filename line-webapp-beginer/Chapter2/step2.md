@@ -4,7 +4,7 @@
 
 LINE bot と同様に LIFF のチャネルを作成する
 
-**※必ず Messaging API のチャネルを作成したときと同じチャネルで作成する**
+**※必ず Messaging API のチャネルを作成したときと同じプロバイダーで作成する**
 
 「LINE ログイン」を選択
 
@@ -17,7 +17,7 @@ LINE bot と同様に LIFF のチャネルを作成する
 
 ![channel_setting](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/line_login_channel.png)
 
-## LIFF URL を設定
+## LIFF アプリ を設定
 
 LIFF タブをクリックして、LIFF アプリを追加する
 
@@ -36,3 +36,22 @@ scope は`openid`、ボットリンク機能は`On(Normal)`を選択する
 ![scope_link](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/scope_link.png)
 
 他の必須項目は任意のものを設定したら「作成」をクリックする
+
+## .env ファイルに記載する変数のメモ
+
+「LIFF」タブの LIFF アプリ一覧から、先程作成した LIFF の`LIFF ID`及び`LIFF URL`をメモする
+
+![liff_apps](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/LIFF_apps.png)
+
+「チャネル基本設定」タブの上にあるチャネル ID をメモする
+
+![channel_id](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/channel_id.png)
+
+## .env の設定
+
+IDE タブを開き`liff-todo-app/.env`の先程メモした以下の内容を記入する
+
+| 項目名            | 値                                             |
+| :---------------- | :--------------------------------------------- |
+| `LIFF_ID`         | （LIFF ID）                                    |
+| `LIFF_CHANNEL_ID` | （LIFF を設定した LINE ログインのチャネル ID） |

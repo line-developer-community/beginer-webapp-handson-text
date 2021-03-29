@@ -49,3 +49,22 @@
 - Webhook URL には以下を設定する
 
 `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/callback`{{copy}}
+
+## .env ファイルに記載する変数のメモ
+
+「Messaging API 設定」タブの一番下にあるチャネルアクセストークンをメモする
+
+![access_token](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/access_token.png)
+
+「チャネル基本設定」タブの下の方にあるチャネルシークレットをメモする
+
+![channel_secret](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/channel_secret.png)
+
+## .env の設定
+
+IDE タブを開き`liff-todo-app/.env`の先程メモした以下の内容を記入する
+
+| 項目名                 | 値                           |
+| :--------------------- | :--------------------------- |
+| `CHANNEL_ACCESS_TOKEN` | （チャネルアクセストークン） |
+| `CHANNEL_SECRET`       | （チャネルシークレット）     |
