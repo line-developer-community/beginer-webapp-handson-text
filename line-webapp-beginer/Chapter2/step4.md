@@ -54,7 +54,7 @@ Indexes:
 
 以下の Query を実行し、仮データを挿入する
 
-`INSERT INTO "public"."user_todo" ("user_id", "is_progress", "todo_detail", "created_at", "updated_at") VALUES ('deadbeafdeadbeafdeadbeaf', 't', 'サンプルコード作成', '2021-03-14 23:18:27', '2021-03-14 14:18:36.031574'), ('deadbeafdeadbeafdeadbeaf', 'f', 'メールチェック', '2021-03-15 13:30:05', '2021-03-15 13:32:29.204017'), ('deadbeafdeadbeafdeadbeaf', 't', 'おやつ', '2021-03-15 15:30:00', '2021-03-15 15:30:00.204017');`{{execute T2}}
+`INSERT INTO user_todo ("user_id", "is_progress", "todo_detail", "created_at", "updated_at") VALUES ('deadbeafdeadbeafdeadbeaf', 't', 'サンプルコード作成', '2021-03-14 23:18:27', '2021-03-14 14:18:36.031574'), ('deadbeafdeadbeafdeadbeaf', 'f', 'メールチェック', '2021-03-15 13:30:05', '2021-03-15 13:32:29.204017'), ('deadbeafdeadbeafdeadbeaf', 't', 'おやつ', '2021-03-15 15:30:00', '2021-03-15 15:30:00.204017');`{{execute T2}}
 
 テーブル内のレコードを確認するときには以下の Query を実行すると確認できる
 
@@ -62,4 +62,12 @@ Indexes:
 
 `WHERE`句を追加すると絞り込み条件を指定してデータを取得できる。以下の Query を実行すると`is_progress = 't(True)'`のレコードを取得する
 
-`SELECT * FROM user_todo WHERE is_progress = 't'`{{execute T2}}
+`SELECT * FROM user_todo WHERE is_progress = 't';`{{execute T2}}
+
+以下の Query を実行すると`id=3`の`is_progress`を `False` に変更する。
+
+`UPDATE user_todo SET is_progress = 'f' WHERE id = 3;`{{execute T2}}
+
+再度テーブルの中身を確認すると変更した値が反映されていることが確認できる
+
+`SELECT * FROM user_todo;`{{execute T2}}
