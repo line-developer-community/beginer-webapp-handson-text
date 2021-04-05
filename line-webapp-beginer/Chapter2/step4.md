@@ -18,6 +18,20 @@
 
 `cd ~/liff-todo-app && docker-compose run web python create_table.py`{{execute T2}}
 
+上記で実行した`create_table.py`では事前に設計したテーブルをデータベースに作成している。
+
+#### 作成したテーブルについて
+
+今回設計したテーブルの構造は以下の表になる。
+
+| カラム名    | 型       | Null 許可 | key     | デフォルト        | 備考                |
+| ----------- | -------- | :-------: | ------- | ----------------- | ------------------- |
+| id          | int      |           | primary |                   | 各レコード固有の ID |
+| user_id     | string   |           |         |                   | LINE のユーザー ID  |
+| is_progress | bool     |           |         | TRUE              | タスクの完了/未完了 |
+| todo_detail | string   |     ○     |         |                   | タスクの詳細        |
+| created_at  | datetime |           |         | current_timestamp | 作成日時            |
+
 ### テーブルの確認
 
 作成したテーブルの構造を確認するためにデータベースのコンテナに入る
@@ -26,7 +40,7 @@
 
 コンテナに入ったらデータベースに接続する
 
-`psql "postgresql://db:5432/todo?user=postgres&password=postgres"`{{execute T2}}
+`cd /code && psql "postgresql://db:5432/todo?user=postgres&password=postgres"`{{execute T2}}
 
 以下のコマンドでテーブルの構造を確認する
 
@@ -40,10 +54,9 @@
 -------------+-----------------------------+-----------+----------+---------------------------------------
  id          | integer                     |           | not null | nextval('user_todo_id_seq'::regclass)
  user_id     | character varying(255)      |           |          |
- is_progress | boolean                     |           |          |
+ is_progress | boolean                     |           |          | 't'
  todo_detail | character varying(255)      |           |          |
- created_at  | timestamp without time zone |           |          |
- updated_at  | timestamp without time zone |           |          | CURRENT_TIMESTAMP
+ created_at  | timestamp without time zone |           |          | CURRENT_TIMESTAMP
 Indexes:
     "user_todo_pkey" PRIMARY KEY, btree (id)
 ```
@@ -54,7 +67,7 @@ Indexes:
 
 以下の Query を実行し、仮データを挿入する
 
-`INSERT INTO user_todo ("user_id", "is_progress", "todo_detail", "created_at", "updated_at") VALUES ('deadbeafdeadbeafdeadbeaf', 't', 'サンプルコード作成', '2021-03-14 23:18:27', '2021-03-14 14:18:36.031574'), ('deadbeafdeadbeafdeadbeaf', 'f', 'メールチェック', '2021-03-15 13:30:05', '2021-03-15 13:32:29.204017'), ('deadbeafdeadbeafdeadbeaf', 't', 'おやつ', '2021-03-15 15:30:00', '2021-03-15 15:30:00.204017');`{{execute T2}}
+`\i ./insert_sample.sql`{{execute T2}}
 
 テーブル内のレコードを確認するときには以下の Query を実行すると確認できる
 
