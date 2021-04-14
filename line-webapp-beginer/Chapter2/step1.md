@@ -46,9 +46,15 @@
 
 ## Webhook の設定
 
-- Webhook URL には以下を設定する
+- 「Messaging API 設定」タブの「Webhook 設定」の Webhook URL には以下を設定する
 
 `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/callback`{{copy}}
+
+## 自動応答を無効にする
+
+- 「LINE 公式アカウント機能」の項目にある応答メッセージは無効にするために「編集」をクリックする
+
+![agreement_policy](https://raw.githubusercontent.com/line-developer-community/beginer-webapp-handson-text/master/line-webapp-beginer/Chapter2/images/auto_reply.png)
 
 ## .env ファイルに記載する変数のメモ
 
